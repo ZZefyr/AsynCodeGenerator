@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Script Wizard Tool</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/main.js?v=4"></script>
+        <link rel="stylesheet" href="style/bootstrap.css?v=3">
+        <link rel="stylesheet" href="style/basic.css?v=3">
+    </head>
+    <body onload="addLine();">
+    <div class="line" style="background-image:url('http://creatives.zdvo.eu/img/colour-palette.png'); width:100%; height:5px"></div>
+      <div id="page">
+        <h1>Asyn code generator</h1>
+
+       <div id="formular">
+        <form class="form-horizontal">
+  <fieldset>
+      <legend>Choose Ad Server instance</legend>
+      <div id="inputsforInstance" class="form-group">
+          <div id="selectAdServerInstance">
+              <label class="control-label">Choose Ad Server instance</label>
+              <select class="form-control" id="selectInstance">
+                  <option value="BbmCz">Czech instance (go.cz showit domain)</option>
+                  <option value="BbmEu">Czech instance (go.eu showit domain)</option>
+                  <option value="BbmIdmNet">IDM instance</option>
+                  <option value="BbmStroeerPL">StroeerPL instance</option>
+                  <option value="BbmIdnes">iDNES instance</option>
+                  <option value="BbmStaging">BB007 instance (staging, for testing purposes)</option>
+                  <option value="BbmDev">Dev instance (go.dev.bbmedia.intra)</option>
+              </select>
+
+          </div>
+      </div>
+    <legend>Insert position ID from Ad Server</legend>
+    <div id="inputsForIds" class="form-group">
+    </div>
+      <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-2">
+              <button type="button" style="float:left; margin-right:5px" onclick="addLine();" class="btn btn-success btn-sm">+ Add position</button>
+              <button id="removeBtn" style="float:left" onclick="removeLine('inputsForIds')" type="button" class="btn btn-primary btn-sm">- Remove position</button>
+          </div>
+      </div>
+      <legend>Attach data - keywords</legend>
+      <div id="inputsforData" class="form-group">
+          <div id="attachDataInput">
+              <label class="control-label">Keyword values (separator ;)</label>
+              <input type="text" class="form-control" name="paramValue" id="keywordValues" placeholder="keyword1;keyword2;keyword3">
+
+          </div>
+      </div>
+
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+       <button type="button" onclick="putVariable();" class="btn btn-primary">Generate</button>
+
+
+      </div>
+    </div>
+  </fieldset>
+</form>
+
+        </div><!--Uzavření div id formular -->
+     <div class="column">
+
+
+         <!--Vygenerovaný kód-->
+      <div style="display:none; width:110%" id="code">
+
+           <p>&lt;!--iBB Ad Server Asyn code--&gt;</p>
+          &lt;script id='ibbTagEngine' src='//bbcdn-static.bbelements.com/scripts/ibb-async/stable/tag.js'&gt;&lt;/script&gt; <br>
+    &lt;script&gt;
+          <br>
+<span id="useAdProvider"></span><div id = "manageAdSlot"></div><br>
+          <div id="keywords"></div>
+     ibbAds.tag.requestAndPlaceAds();
+          <br>
+    &lt;/script&gt;
+          <br><br>
+    &lt;!-- PLEASE CHECK, WHETHER YOU HAVE INSERTED MENTIONED AD-SLOT DIVS BELOW, IN YOUR WEBPAGE SOURCE CODE!--&gt;
+          <br>
+    &lt;!-- Individual DIVS must be placed into the html page where the ad should appear --&gt;
+          <br>
+ <span id="divSlots"></span>
+
+
+          </div><!--Uzavření div id code -->
+         <button id="editBtn" style="display:none; margin-top:10px" type="button" onclick="edit();" class="btn btn-info">Back</button>
+     </div>
+        
+      </div> <!--Uzavření div id page -->
+    </body>
+</html>

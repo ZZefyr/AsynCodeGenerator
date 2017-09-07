@@ -1,0 +1,62 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8.2.2017, 10:42:14
+    Author     : zdvo
+*/
+#page {
+    max-width: 80%;
+    margin: 0.5em auto 0.5em auto
+}
+#formular {
+    max-width:40%;
+    /*max-height:auto;*/
+    margin-left:1em;
+    float:left
+}
+
+#manageAdSlot{
+     padding-left: 65px;
+ }
+#useAdProvider{
+    padding-left: 35px;
+}
+
+#keywords{
+    padding-left: 130px;
+}
+#divSlots{
+    padding-left: 30px;
+}
+
+.column {
+    margin-left:5em;
+    width:50%;
+    height:500px;
+    float:left;
+}
+
+.codeForCopy{
+    width:100%;
+    height:650px;
+}
+.imagebackground{
+    display:none;
+}
+
+input {
+    margin-bottom:5px;
+}
+
+#code {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size:1em;
+    border: 1px solid rgba(107, 103, 103, 0.32);
+    border-radius:4px;
+    background-color: #eeeeee;
+    padding:5px;
+    margin-top:25px
+}
