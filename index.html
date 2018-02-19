@@ -71,7 +71,14 @@
           &lt;script id='ibbTagEngine' src='//bbcdn-static.bbelements.com/scripts/ibb-async/stable/tag.js'&gt;&lt;/script&gt; <br>
     &lt;script&gt;
           <br>
-<span id="useAdProvider"></span><div id = "manageAdSlot"></div><br>
+<span id="useAdProvider"></span>
+
+          <div id = "manageAdSlot"></div><br>
+          <span id="ibbPlugin">
+          var getIbbId = ibbAds.tag.useDataProvider('BbnautIdDataProvider', { url : '//bbcdn-static.bbelements.com/scripts/ibb-async/stable/plugins/BbnautIdDataProvider.js'
+          });</span><br>
+          <span id="ibbPluginAttachData">
+          adserver.attachData('ibbid', getIbbId); </span><br>
           <div id="keywords"></div>
      ibbAds.tag.requestAndPlaceAds();
           <br>

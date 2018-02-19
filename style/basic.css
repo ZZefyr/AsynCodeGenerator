@@ -21,12 +21,12 @@ and open the template in the editor.
 #manageAdSlot{
      padding-left: 65px;
  }
-#useAdProvider{
+#useAdProvider, #ibbPlugin{
     padding-left: 35px;
 }
 
-#keywords{
-    padding-left: 130px;
+#keywords, #ibbPluginAttachData{
+    padding-left: 65px;
 }
 #divSlots{
     padding-left: 30px;
